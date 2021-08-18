@@ -1,6 +1,11 @@
 from typing import List
 
 class Solution:
+    """
+    旋转数组
+
+    给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
+    """
     def rotate(self, nums: List[int], k: int) -> None:
         total = len(nums)
         if k > total:

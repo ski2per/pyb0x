@@ -2,6 +2,11 @@ from typing import List
 
 
 class Solution:
+    """
+    两个数组的交集 II
+
+    给定两个数组，编写一个函数来计算它们的交集。
+    """
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
         # Sort two lists first
         nums1.sort()
