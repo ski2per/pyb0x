@@ -23,29 +23,27 @@ class Solution:
                 if nums[x] == remainder:
                     return [idx, x]
 
-    def twoSum2(self, nums, target):
+    def twoSum2(self, nums:List[int], target: str) -> list:
         """
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
         """
-        i = 0
-        j = len(nums)
-        while i<j:
-            if nums[i] >= target:
-                i += 1
-            if nums[j] >= target:
-                j -= 1
-            
-            
-            if nums[i] + nums[j] == target:
-                return [i, j]
-            # still working
+        d = {}
+        for idx, num in enumerate(nums):
+            key = target - num
+            if key in d:
+                return [idx, d[key]] 
+            d[num] = idx
+        return []
 
 
 
 
 if __name__ == '__main__':
+    # sol = Solution()
+    # print(sol.twoSum([3, 7, 8, 10, 4, 5], 9))
+
     sol = Solution()
-    print(sol.twoSum([3, 7, 8, 10, 4, 5], 9))
+    print(sol.twoSum2([3, 7, 8, 10, 4, 5], 9))
 
