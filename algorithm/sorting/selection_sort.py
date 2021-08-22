@@ -7,6 +7,7 @@ def selection_sort(arr):
     for i in range(n):
         # Assume i element is minimum
         min_index = i
+        print(f"")
         # Scan to find the real minimum number
         for j in range(i + 1, n):
             if arr[j] < arr[min_index]:
@@ -14,16 +15,16 @@ def selection_sort(arr):
                 min_index = j
         # Swap real minimum element to i
         arr[i], arr[min_index] = arr[min_index], arr[i]
-        print(f"current i: {i}",arr)
+        print(f"outer loop(#{i})",arr)
 
     return arr
 
 
 if __name__ == '__main__':
-    # numbers = [4, 2, 5, 7, 1, 3]
+    numbers = [4, 2, 5, 7, 1, 3]
     #numbers = [random.randint(0, 1000) for _ in range(1000)]
-    numbers = [random.randint(0, 1000) for _ in range(10)]
-    print("origin", numbers)
+    #numbers = [random.randint(0, 1000) for _ in range(10)]
+    print(f"origin: {numbers}, length: {len(numbers)}")
     t0 = time.time()
     print(selection_sort(numbers))
     t1 = time.time()

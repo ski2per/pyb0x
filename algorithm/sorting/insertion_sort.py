@@ -28,6 +28,10 @@ def insertion_sort(arr):
 if __name__ == '__main__':
     numbers = [7, 2, 4, 1, 5, 3]
     #numbers = [random.randint(0, 1000) for _ in range(1000)]
+    #numbers = [random.randint(0, 1000) for _ in range(10)]
+    print(f"origin: {numbers}, length: {len(numbers)}")
+
+    #numbers = [random.randint(0, 1000) for _ in range(1000)]
     t0 = time.time()
     print(insertion_sort(numbers))
     t1 = time.time()
